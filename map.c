@@ -28,10 +28,10 @@ void diff() {
     printf("%d", *(myNumbers + 2));
 
     int *ptr = myNumbers;
-    int i;
+    int j;
 
-    for (i = 0; i < 4; i++) {
-        printf("%d\n", *(ptr + i));
+    for (j= 0; j < 4; j++) {
+        printf("%d\n", *(ptr + j));
     }
 }
 
@@ -39,6 +39,7 @@ int main()
 {
     int myAge = 43; // an int variable
     another();
+    diff();
     printf("%d\n", myAge);  // Outputs the value of myAge (43)
     printf("%p\n", &myAge); // Outputs the memory address of myAge (0x7ffe5367e044)
     return 0;
