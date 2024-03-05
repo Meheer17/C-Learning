@@ -806,35 +806,23 @@ void UnionIntersection()
         for (int j = 0; j < x; j++)
             if (arr1[i] == arr2[j])
             {
-                uni[unic] = arr1[i];
-                unic++;
+                uni[unic++] = arr1[i];
                 break;
             }
 
         int flag = 0;
         for (int j = 0; j < interc; j++)
-        {
             if (arr1[i] == inter[j])
-            {
                 flag = 1;
-            }
-        }
         // printf("%d-%d-%d\n", arr1[i], arr2[j],flag);
         if (!flag)
-        {
-            inter[interc] = arr1[i];
-            interc++;
-        }
+            inter[interc++] = arr1[i];
 
         flag = 0;
         int j;
         for (j = 0; j < interc; j++)
-        {
             if (arr2[i] == inter[j])
-            {
                 flag = 1;
-            }
-        }
 
         if (!flag)
         {

@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
-struct myStructure {
+typedef struct {
   int myNum;
   char myLetter;
   char myString[30];
-};
+} myStructure;
 
 int main() {
   // Create a structure variable and assign values to it
-  struct myStructure s1 = {13, 'B', "Some text"};
+  myStructure s1 = {13, 'B', "Some text"};
   // Modify values
   s1.myNum = 30;
   s1.myLetter = 'C';
