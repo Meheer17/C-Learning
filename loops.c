@@ -4,7 +4,7 @@
 
 int main()
 {
-    // While loop
+    //while loop
     int i = 0;
     while (i <= 100)
     {

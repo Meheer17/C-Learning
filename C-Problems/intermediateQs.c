@@ -1,9 +1,33 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include<ctype.h>
 
 int arr[] = {12, 13, 1, 5, 4, 7, 8, 10, 10, 11};
 int arrLen = sizeof(arr)/sizeof(arr[0]);
+
+int ReverseWords(){
+    char str[] = "Hello World";
+	int reg[10] = {}, count = 0;
+
+	for(int i = 0 ; i < strlen(str); i++)
+		if(isspace(str[i])) 
+			reg[0] += 1, reg[reg[0]] = i;
+	
+	int len = reg[0], i = len;
+	while(i > 0){
+		if(i == len){
+			for(int j = reg[i] + 1; j < strlen(str); j++) printf("%c", str[j]);
+			i--;
+		} else {
+			for(int j = reg[i] + 1; j < reg[i+1]; j++) printf("%c", str[j]);
+			i--;
+		}
+		printf(" ");
+	} 
+	for(int j = 0; j < reg[1]; j++) printf("%c", str[j]);
+  	return 0;
+}
 
 void MaxDiff(){
     int arr[] = {12, 13, 1, 5, 4, 7, 8, 10, 10, 11};
@@ -139,7 +163,6 @@ void SaddlePoint(){
         if(tempCol == tempRow)  
             printf("%d\n", tempCol);        
     }
-
 }
 
 void Swap1 (int *pa, int *pb){
@@ -403,7 +426,19 @@ void Multistring()
     permute(str, 0, n - 1); 
 }
 
+void reverseWord(){
+    char s[] = "Hello World", s2[10][20], temp[20]= "", sp[1]=" ";
+    int wc = 0;
+    for(int i = 0; i < strlen(s); i++){
+        if(!strcmp((char *)s[i], sp)) wc += 1;
+        strncat(temp, s, i);
+    }
+    printf("%s", temp);
+    // for(int i = 0; i < wc/2+1; i++){
+    // }
+}
+
 int main(){
-    Multistring();
+    reverseWord();
     return 0;
 }

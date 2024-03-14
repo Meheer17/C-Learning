@@ -13,6 +13,8 @@ int main()
 
     intpointer++; //now increase the pointer's address so it points to the 5th elemnt in the array
     printf("address: %x - has value %d\n", intpointer, *intpointer); //print the address of the 5th element
+    int j = &intarray[1];
+    printf("%p", 5 * j);
 
     return 0;
 }
