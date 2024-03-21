@@ -19,7 +19,6 @@ int main() {
       }
       sum += number;
    }
-
 jump:
     average = sum / (i - 1);
     printf("Sum = %.2f\n", sum);
